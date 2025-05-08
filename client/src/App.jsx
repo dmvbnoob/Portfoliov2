@@ -1,11 +1,15 @@
-import { Button } from "@/components/ui/button"
+import SidebarWrapper from "@/components/SidebarWrapper";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
+    <div className="flex">
+      <SidebarWrapper />
+      <main className="flex-1 p-4">
+        <Outlet />
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
